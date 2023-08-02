@@ -221,14 +221,15 @@ export const SearchInputWrapper = styled.div`
   align-items: center;
 `;
 
-export const StyledMicrophone = styled.div`
-  /* Add the styles from the style attribute here */
-  ${props =>
-    props.active && ` 
-    color:${primaryColor};
-    background-color:${accentColor}; 
-  `}
 
+export const StyledMicrophone = styled.div`
+/* Add the styles from the style attribute here */
+${props =>
+  props.active && ` 
+  color:${primaryColor};
+  background-color:${accentColor}; 
+  `}
+  
   margin-left: 10px;
   margin-right: 5px;
   cursor: pointer;
@@ -267,13 +268,38 @@ export const SearchIcon = styled.div`
     background-color:${secondaryColor};
     color:${accentColor};
   }
-
+  
   @media (max-width: ${breakpoints.small}px) {
     font-size: .5em;
   }
-`;
+  `;
+  
+  export const CrossIcon = styled.div`
+  top: 50%;
+  right: 10px;
+  margin: -2px;
+  cursor: pointer;
+  font-size: 1.3em;
+  border-right: 1px solid ${accentColor};
+  border-bottom: 1px solid ${accentColor};
+  border-top: 1px solid ${accentColor};
+  border-bottom-right-radius: 30%;
+  border-top-right-radius: 30%;
+  padding: 0.2em;
+  color: ${primaryColor}; 
+  background-color: ${accentColor}; 
+  
+  &:hover{
+    background-color:${secondaryColor};
+    color:${accentColor};
+  }
+  
+  @media (max-width: ${breakpoints.small}px) {
+    font-size: .5em;
+  }
+  `;
 
-export const SelectedFilteredArea = styled.div`
+  export const SelectedFilteredArea = styled.div`
   display: list-item;
   padding: 0.2em;
   margin: 2em;

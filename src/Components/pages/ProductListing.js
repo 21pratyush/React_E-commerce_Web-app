@@ -4,8 +4,8 @@ import { CartContext } from '../../Contexts/CartContext';
 import { Link } from 'react-router-dom';
 import * as ProductListingStyle from '../../Styles/ProductListingStyle';
 import Fuse from 'fuse.js';
-import { FaMicrophone } from 'react-icons/fa'; // Import the microphone icon
-import { FaSearch } from 'react-icons/fa'; // Import the search icon
+import { FaMicrophone, FaSearch, FaTimes } from 'react-icons/fa';
+import { useSpring, animated } from 'react-spring';
 
 
 const ProductListing = () => {
@@ -24,7 +24,13 @@ const ProductListing = () => {
   const { addItemToCart, isItemInCart } = useContext(CartContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [isVoiceSearchActive, setIsVoiceSearchActive] = useState(false);
+  const [showCrossIcon, setShowCrossIcon] = useState(false);
 
+  // Animation for showing/hiding the cross icon
+  const crossIconAnimation = useSpring({
+    opacity: showCrossIcon ? 1 : 0,
+    width: showCrossIcon ? '20px' : '0px',
+  });
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -210,18 +216,22 @@ const ProductListing = () => {
     threshold: 0.4, // Fuzzy search threshold (0 to 1, lower values are more strict)
   });
 
-  // Function to handle search 
+  //Function to search
   const handleSearch = (query) => {
     const trimmedQuery = query.trim();
+    setSearchQuery(trimmedQuery);
     if (trimmedQuery === '') {
-      setSearchQuery('');
       setFilteredProducts(products);
-    }
-    else {
-      setSearchQuery(trimmedQuery);
+    } else {
       const result = fuse.search(trimmedQuery);
       setFilteredProducts(result.map((item) => item.item));
     }
+  };
+  
+  // Function to clear the search input and remove all strings input by the user
+  const clearSearch = () => {
+    setSearchQuery('');
+    setFilteredProducts(products);
   };
 
   // Function to handle voice search
@@ -270,15 +280,33 @@ const ProductListing = () => {
               {category}
             </ProductListingStyle.CategoryFilter>
           ))}
-          <ProductListingStyle.SearchInputWrapper>
-            <ProductListingStyle.StyledMicrophone onClick={handleVoiceSearch} active={isVoiceSearchActive.toString()}>
-              <FaMicrophone />
-            </ProductListingStyle.StyledMicrophone>
-            <ProductListingStyle.SearchInput type="text" value={searchQuery} onChange={(e) => handleSearch(e.target.value)} placeholder="Search products..." />
+           <ProductListingStyle.SearchInputWrapper>
+          <ProductListingStyle.StyledMicrophone onClick={handleVoiceSearch} active={isVoiceSearchActive.toString()}>
+            <FaMicrophone />
+          </ProductListingStyle.StyledMicrophone>
+          <ProductListingStyle.SearchInput
+            type="text"
+            value={searchQuery}
+            onChange={(e) => handleSearch(e.target.value)}
+            placeholder="Search products..."
+            onFocus={() => setShowCrossIcon(true)}
+            onBlur={() => setShowCrossIcon(false)}
+          />
+          {/* Render the cross icon when the input field has a value */}
+          {searchQuery && (
+            <animated.div style={{ ...crossIconAnimation }}>
+              <ProductListingStyle.CrossIcon onClick={clearSearch}>
+                <FaTimes />
+              </ProductListingStyle.CrossIcon>
+            </animated.div>
+          )}
+          {/* Render the search icon when the input field is empty */}
+          {!searchQuery && (
             <ProductListingStyle.SearchIcon onClick={() => handleSearch(searchQuery)}>
               <FaSearch />
             </ProductListingStyle.SearchIcon>
-          </ProductListingStyle.SearchInputWrapper>
+          )}
+        </ProductListingStyle.SearchInputWrapper>
           <ProductListingStyle.FilterButton onClick={handleFilterModalOpen}>
             Filter
             {selectedFilters.length > 0 && (
