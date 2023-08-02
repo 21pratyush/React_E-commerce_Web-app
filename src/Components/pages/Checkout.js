@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { AiOutlineCode } from 'react-icons/ai';
 
 function Checkout() {
-  // Define the animation for the warning icon
+  // animation for the warning icon
   const warningAnimation = useSpring({
     from: { opacity: 1, transform: 'scale(0.2)' },
     to: { opacity: 1, transform: 'scale(1)' },

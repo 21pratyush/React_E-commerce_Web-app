@@ -1,10 +1,9 @@
-// CartPage.js
 import React, { useContext } from 'react';
 import { CartContext } from '../../Contexts/CartContext';
 import { useSpring, animated } from 'react-spring';
 import { RiShoppingCartLine, RiShoppingCart2Line, RiShoppingBasketLine } from 'react-icons/ri';
 import { BsPlus, BsDash } from 'react-icons/bs';
-import * as CartPageStyle from '../../Styles/CartPageStyle';
+import * as CartPageStyle from '../../Styles/Pages_Style/CartPageStyle';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin6Line } from 'react-icons/ri';

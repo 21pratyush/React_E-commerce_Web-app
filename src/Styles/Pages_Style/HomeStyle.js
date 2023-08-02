@@ -1,21 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+// some color constants
 const primaryColor = '#fff';
 const secondaryColor = '#e6e6e6';
 const accentColor = '#f50056';
 
+//breakpoints for responsive design
 const breakpoints = {
   small: 480,
   medium: 768,
   large: 1024,
 };
 
+// global style to apply to the whole body
 export const GlobalStyle = createGlobalStyle`
   body {
     background-color: #0f0014;
   }
 `;
 
+// Styling for the UserStyle div
 export const UserStyle = styled.div`
   text-align: center;
   margin-top: 40px;
@@ -38,7 +42,23 @@ export const UserStyle = styled.div`
   }
 `;
 
-export const Heading1 = styled.h1`
+// Styling for the WelcomeContent div
+export const WelcomeContent = styled.div`
+  padding-left: 2%;
+  width: 50%;
+  transform: translateY(-110%);
+
+  @media (max-width: ${breakpoints.medium}px) {
+    width: 70%;
+  }
+
+  @media (max-width: ${breakpoints.small}px) {
+    width: 90%;
+  }
+`;
+
+// Styling for Heading1 (h1)
+export const Heading1 = styled.h1`S
   font-size: 36px;
   color: ${primaryColor};
   margin-top: 20px;
@@ -49,6 +69,7 @@ export const Heading1 = styled.h1`
   }
 `;
 
+// Styling for Paragraph (p)
 export const Paragraph = styled.p`
   font-size: 18px;
   color: #444;
@@ -79,19 +100,5 @@ export const Paragraph = styled.p`
   @media (max-width: ${breakpoints.small}px) {
     width: 95%;
     padding: 15px;
-  }
-`;
-
-export const WelcomeContent = styled.div`
-  padding-left: 2%;
-  width: 50%;
-  transform: translateY(-110%);
-
-  @media (max-width: ${breakpoints.medium}px) {
-    width: 70%;
-  }
-
-  @media (max-width: ${breakpoints.small}px) {
-    width: 90%;
   }
 `;

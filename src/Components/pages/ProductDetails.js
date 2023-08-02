@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import { CartContext } from '../../Contexts/CartContext';
 import { useSpring } from 'react-spring';
-import * as ProductDetailsStyle from '../../Styles/ProductDetailsStyle';
+import * as ProductDetailsStyle from '../../Styles/Pages_Style/ProductDetailsStyle';
 
 
 const ProductDetails = () => {
@@ -75,7 +75,7 @@ const ProductDetails = () => {
               <ProductDetailsStyle.ProductCategory>Category -{product.category}</ProductDetailsStyle.ProductCategory>
               <ProductDetailsStyle.ProductDescription>Description: {product.description}</ProductDetailsStyle.ProductDescription>
               <ProductDetailsStyle.AddToCartButton
-                added={addedToCart ? true : undefined}  //used ternary operator to avoid warning-error in console
+                added={addedToCart ? true : undefined}  //used ternary-operator to avoid warning-error in console
                 onClick={() => handleAddToCart(product)}
               >
                 {addedToCart ? (

@@ -1,10 +1,17 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// color-constants
 const primaryColor = '#fff';
 const secondaryColor = '#e6e6e6';
 const accentColor = '#f50056';
 
+//breakpoints for responsive design
+const smallScreen = '480px';
+const mediumScreen = '768px';
+const largeScreen = '1024px';
+
+// Define a reusable neon light effect for links
 const neonLightEffect = css`
   position: relative;
   &::after {
@@ -19,10 +26,7 @@ const neonLightEffect = css`
   }
 `;
 
-const smallScreen = '480px';
-const mediumScreen = '768px';
-const largeScreen = '1024px';
-
+// Styling for the navigation wrapper
 const NavigationWrapper = styled.nav`
   display: flex;
   align-items: center;
@@ -54,6 +58,12 @@ const NavigationWrapper = styled.nav`
   }
 `;
 
+// Styling for the store icon
+const StoreIcon = styled.div`
+  color: ${accentColor};
+`;
+
+// Styling for navigation links using react-router-dom's Link
 const NavigationLink = styled(Link)`
   text-decoration: none;
   color: ${accentColor};
@@ -84,17 +94,7 @@ const NavigationLink = styled(Link)`
   }
 `;
 
-const CartIndicator = styled.span`
-  padding: 2px 6px;
-  margin-left: -8px;
-  background-color: red;
-  color: ${primaryColor};
-  font-size: 1em;
-  border-radius: 50%;
-  position: relative;
-  top: -30px;
-`;
-
+// Styling for the cart page link using react-router-dom's Link
 const CartPageLink = styled(Link)`
   text-decoration: none;
   color: ${accentColor};
@@ -122,8 +122,17 @@ const CartPageLink = styled(Link)`
   }
 `;
 
-const StoreIcon = styled.div`
-  color: ${accentColor};
+// Styling for the cart indicator
+const CartIndicator = styled.span`
+  padding: 2px 6px;
+  margin-left: -8px;
+  background-color: red;
+  color: ${primaryColor};
+  font-size: 1em;
+  border-radius: 50%;
+  position: relative;
+  top: -30px;
 `;
 
+// Exporting the styled components
 export { NavigationWrapper, NavigationLink, CartIndicator, CartPageLink, StoreIcon };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import * as FooterStyle from '../../Styles/FooterStyle'
+import * as FooterStyle from '../../Styles/CommonPage_Style/FooterStyle'
 const Footer = () => {
   return (
     <FooterStyle.FooterContainer>

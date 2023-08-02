@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { CartContext } from '../../Contexts/CartContext';
 import { Link } from 'react-router-dom';
-import * as ProductListingStyle from '../../Styles/ProductListingStyle';
+import * as ProductListingStyle from '../../Styles/Pages_Style/ProductListingStyle';
 import Fuse from 'fuse.js';
 import { FaMicrophone, FaSearch, FaTimes } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
 
-
+ 
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);

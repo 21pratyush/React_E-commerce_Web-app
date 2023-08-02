@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import { AiOutlineArrowLeft, AiOutlineWarning } from 'react-icons/ai';
-import * as NotFoundPageStyle from '../../Styles/NotFoundPageStyle';
-
+import * as NotFoundPageStyle from '../../Styles/Pages_Style/NotFoundPageStyle';
+ 
 const NotFoundPage = () => {
-  // Define the animation for the Go Back button
+  // animation for the Go Back button
   const buttonAnimation = useSpring({
     from: { opacity: 1, transform: 'translateX(20px)' },
     to: { opacity: 1, transform: 'translateX(0)' },
