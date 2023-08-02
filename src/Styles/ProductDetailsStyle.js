@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import { animated } from 'react-spring';
 
 const primaryColor = '#fff';
 const secondaryColor = '#e6e6e6';
