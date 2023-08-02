@@ -22,7 +22,7 @@ const ProductListing = () => {
   const [isFilterApplied, setIsFilterApplied] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState([]);
   const { addItemToCart, isItemInCart } = useContext(CartContext);
-  const [searchQuery, setSearchQuery] = useState(''); // Add this line to define 'searchQuery' state
+  const [searchQuery, setSearchQuery] = useState('');
   const [isVoiceSearchActive, setIsVoiceSearchActive] = useState(false);
 
   useEffect(() => {
@@ -181,7 +181,7 @@ const ProductListing = () => {
     const starIcons = [];
 
     for (let i = 0; i < filledStars; i++) {
-      starIcons.push(<ProductListingStyle.StarIcon key={i} active= {true} >&#9733;</ProductListingStyle.StarIcon>);
+      starIcons.push(<ProductListingStyle.StarIcon key={i} active={true} >&#9733;</ProductListingStyle.StarIcon>);
     }
 
     if (hasHalfStar) {
@@ -210,16 +210,20 @@ const ProductListing = () => {
     threshold: 0.4, // Fuzzy search threshold (0 to 1, lower values are more strict)
   });
 
-  // Function to handle search
+  // Function to handle search 
   const handleSearch = (query) => {
-    setSearchQuery(query);
-    if (query === '') {
+    const trimmedQuery = query.trim();
+    if (trimmedQuery === '') {
+      setSearchQuery('');
       setFilteredProducts(products);
-    } else {
-      const result = fuse.search(query);
+    }
+    else {
+      setSearchQuery(trimmedQuery);
+      const result = fuse.search(trimmedQuery);
       setFilteredProducts(result.map((item) => item.item));
     }
   };
+
   // Function to handle voice search
   const handleVoiceSearch = () => {
     if ('webkitSpeechRecognition' in window) {
@@ -404,7 +408,7 @@ const ProductListing = () => {
                 </ProductListingStyle.ProductRating>
                 <ProductListingStyle.AddToCartButton
                   onClick={() => handleAddToCart(product)}
-                  added={isItemInCart(product.id)}  
+                  added={isItemInCart(product.id)}
                   disabled={isItemInCart(product.id)}
                 >
                   {isItemInCart(product.id) ? (
