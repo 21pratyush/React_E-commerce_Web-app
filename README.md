@@ -41,7 +41,7 @@ git clone git@github.com:21pratyush/React_E-commerce_Web-app.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd React_E-commerce_Web-app
+cd your-repo
 ```
 3. Install the dependencies:
 ```bash
