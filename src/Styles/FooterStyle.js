@@ -14,7 +14,7 @@ const breakpoints = {
 export const FooterContainer = styled.footer`
   background-color: ${secondaryColor};
   color: black;
-  padding: 20px;
+  padding: 0;
   text-align: center;
   margin-top: 30%;
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 20px;
