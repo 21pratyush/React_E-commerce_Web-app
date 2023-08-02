@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# E-commerce web-app [![Live Demo 👁️](https://img.shields.io/badge/Live%20Demo-View%20👁️-red)](https://e-commerce-react-web-app.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project is only for hands-on React practice and learning.  ⚛️ 💻
 
-In the project directory, you can run:
+## Table of Contents 📚
 
-### `npm start`
+1. 🚀 [Getting Started](#getting-started)
+   - 📋 [Prerequisites](#prerequisites)
+   - 🛠️ [Installation](#installation)
+   - 🚀 [Usage](#usage)
+2. 💡 [Features](#features)
+3. 🌐 [Live Demo](#live-demo)
+4. 🖼️ [Screenshots](#screenshots)
+5. ⚙️ [Technologies Used](#technologies-used)
+6. 🤝 [Contributing](#contributing)
+7. 📞 [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before running the project, ensure that you have the following software installed:
 
-### `npm run build`
+- 🟩 Node.js ```v18.9.0 ```
+- 📦 NPM ```9.6.7```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To set up the project, follow these steps: 👨‍💻
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/21pratyush/React_E-commerce_Web-app.git
+```
+```bash
+git clone git@github.com:21pratyush/React_E-commerce_Web-app.git
+```
+2. Navigate to the project directory:
+```bash
+cd your-repo
+```
+3. Install the dependencies:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
+1. To start the development server, run the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
+2. Open your web browser and go to ```http://localhost:3000``` to view the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💡Features
 
-## Learn More
+List the main features of your web app, such as:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Home-page with decent introduction
+- Product-listing-page with 
+   - Searching  🔍
+   - Voice-search   🗣️🎤
+   - Sorting ⬆️⬇️
+   - Filtering 🔖
+- Product detail page with product information and related products
+- Shopping cart page for adding and managing items
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌟Live Demo
 
-### Code Splitting
+Check out the live demo of the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Here-green)](https://e-commerce-react-web-app.netlify.app/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots 📸
 
-### Making a Progressive Web App
+A glimpse of my web-app through the following GIFs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Home-Page
+![Home Page](./Screenshots/home.gif) 
+### Product_Listing-Page
+![Product Listing Page](./Screenshots/product-listing.gif)
+### Product_Details-Page
+![Product Detail Page](./Screenshots/product-detail.gif)
+### Cart-Page
+![Cart Page](./Screenshots/cart.gif)
 
-### Advanced Configuration
+## 🛠️ Technologies-Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ⚛️ React.js
+- 🌐 React Router
+- ✨ React Spring
+- 💅 Styled Components (or any other CSS-in-JS library)
+- 🛒 Cart Context
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing  
 
-### `npm run build` fails to minify
+If you want to contribute to the project, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 🍴 Fork the repository
+- 🌿 Create a new branch
+- 🛠️ Make changes and commit them
+- 🔀 Open a pull request
+
+
+## Contact
+
+- Feel free to reach out to me via
+
+[![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/pratyush-prakhar-149217241/) 
+[![Gmail](https://img.icons8.com/color/48/000000/gmail-new.png)](mailto:pratyush.prakhar21@gmail.com)
