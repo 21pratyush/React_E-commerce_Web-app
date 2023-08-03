@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useSpring, animated } from 'react-spring'; // Import the necessary components from react-spring
 import { CartContext } from '../../Contexts/CartContext';
-import * as NavigationStyle from '../../Styles/NavigationStyle';
+import * as NavigationStyle from '../../Styles/CommonPage_Style/NavigationStyle';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { RiStore2Line } from 'react-icons/ri'; // Import the store icon
 import { Link } from 'react-router-dom'; // Import the Link component

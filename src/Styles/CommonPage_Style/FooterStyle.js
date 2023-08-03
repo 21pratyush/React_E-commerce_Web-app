@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+ 
 // eslint-disable-next-line 
 const primaryColor = '#fff';
 const secondaryColor = '#e6e6e6';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { FaUserSecret } from 'react-icons/fa'; // Import the FaUserSecret icon from the Font Awesome pack
-import * as HomeStyle from '../../Styles/HomeStyle';
+import { FaUserSecret } from 'react-icons/fa'; 
+import * as HomeStyle from '../../Styles/Pages_Style/HomeStyle';
 
 const Home = () => {
   const animationProps = useSpring({
