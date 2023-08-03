@@ -1,7 +1,7 @@
 # E-commerce web-app [![Live Demo 👁️](https://img.shields.io/badge/Live%20Demo-View%20👁️-red)](https://e-commerce-react-web-app.netlify.app/)
 
 
-This project is only for hands-on React practice and learning.  ⚛️ 💻
+This project is only for hands-on React and Docker practice and learning.  ⚛️ 🐳 💻
 
 ## Table of Contents 📚
 
@@ -56,6 +56,20 @@ npm start
 ```
 2. Open your web browser and go to ```http://localhost:3000``` to view the app.
 
+## 🐳 Docker
+If you have Docker installed, you can also run the app in a Docker container. 
+
+- Follow these steps
+1. Pull the Docker image from Docker Hub:
+```bash
+docker pull pratyush21/react-ecommerce
+```
+2. Run the app in a Docker container:
+```bash
+docker run -d -p 3000:80 pratyush21/react-ecommerce
+```
+- Open your web browser and go to ```http://localhost:3000``` to view the app.
+
 ## 💡Features
 
 List the main features of your web app, such as:
@@ -94,7 +108,7 @@ A glimpse of my web-app through the following GIFs.
 - ⚛️ React.js
 - 🌐 React Router
 - ✨ React Spring
-- 💅 Styled Components (or any other CSS-in-JS library)
+- 💅 Styled Components (CSS-in-JS library)
 - 🛒 Cart Context
 
 
