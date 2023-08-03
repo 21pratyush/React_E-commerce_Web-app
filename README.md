@@ -1,7 +1,7 @@
 # E-commerce web-app [![Live Demo 👁️](https://img.shields.io/badge/Live%20Demo-View%20👁️-red)](https://e-commerce-react-web-app.netlify.app/)
 
 
-This project is only for hands-on React practice and learning.  ⚛️ 💻
+This project is only for hands-on React and Docker practice and learning.  ⚛️ 🐳 💻
 
 ## Table of Contents 📚
 
