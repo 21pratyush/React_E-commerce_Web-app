@@ -56,6 +56,20 @@ npm start
 ```
 2. Open your web browser and go to ```http://localhost:3000``` to view the app.
 
+### 🐳 Docker
+If you have Docker installed, you can also run the app in a Docker container. 
+
+- Follow these steps
+1. Pull the Docker image from Docker Hub:
+```bash
+docker pull pratyush21/react-ecommerce
+```
+2. Run the app in a Docker container:
+```bash
+docker run -d -p 3000:80 pratyush21/react-ecommerce
+```
+- Open your web browser and go to ```http://localhost:3000``` to view the app.
+
 ## 💡Features
 
 List the main features of your web app, such as:
