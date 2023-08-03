@@ -108,7 +108,7 @@ A glimpse of my web-app through the following GIFs.
 - ⚛️ React.js
 - 🌐 React Router
 - ✨ React Spring
-- 💅 Styled Components (or any other CSS-in-JS library)
+- 💅 Styled Components (CSS-in-JS library)
 - 🛒 Cart Context
 
 
