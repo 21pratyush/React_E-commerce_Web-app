@@ -56,7 +56,7 @@ npm start
 ```
 2. Open your web browser and go to ```http://localhost:3000``` to view the app.
 
-### 🐳 Docker
+## 🐳 Docker
 If you have Docker installed, you can also run the app in a Docker container. 
 
 - Follow these steps
